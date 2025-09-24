@@ -189,50 +189,50 @@ body.dark  .count {
 }
 
 
-@media (max-width: 768px) {
-  .form-container, 
-  .dis, 
-  .w-75 {
-    width: 95% !important;
-    padding: 15px;
-    margin: 10px auto;
+/* موبايلات صغيرة جداً */
+@media (max-width: 576px) {
+  .container {
+    flex-direction: column !important;
   }
 
-  .products {
-    grid-template-columns: 1fr 1fr; 
-    gap: 15px;
-  }
-
-  .product-card {
-    font-size: 14px;
-    padding: 10px;
+  .form, 
+  .dis {
+    width: 100% !important;
+    margin: 10px 0 !important;
   }
 
   .search {
-    width: 100%;
-    margin-bottom: 15px;
+    width: 100% !important;
   }
 
-  .count {
-    font-size: 14px;
-    padding: 5px 10px;
+  #select {
+    width: 100% !important;
+    margin-top: 10px;
+  }
+
+  .card {
+    width: 100% !important;
   }
 }
 
 
-@media (max-width: 480px) {
-  .products {
-    grid-template-columns: 1fr; 
+@media (min-width: 577px) and (max-width: 768px) {
+  .container {
+    flex-direction: column !important;
   }
 
-  .title2 {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
+  .form, 
+  .dis {
+    width: 100% !important;
+    margin: 10px 0 !important;
   }
 
-  button {
-    width: 100%;
-    margin-bottom: 10px;
+  .search {
+    width: 80% !important;
+  }
+
+  #select {
+    width: 80% !important;
+    margin-top: 10px;
   }
 }
