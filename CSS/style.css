@@ -1,0 +1,238 @@
+/* start header */
+header {
+    background-color: #0046FF;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h4 {
+    margin-left: 30px;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.import {
+    border: 1px solid #fff;
+    border-radius: 4px;
+    padding: 5px;
+    margin: 10px;
+}
+
+#mode {
+    border: 1px solid #fff;
+    border-radius: 4px;
+    padding: 5px;
+    margin: 10px;
+}
+
+/* end header */
+
+/* start form */
+.form {
+    position: relative;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.form .title {
+    background-color: #0046FF;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.btn {
+    position: absolute;
+    left: 10%;
+    width: 220px;
+    margin: auto;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* end form */
+
+.dis {
+    position: relative;
+    margin-left: 40px;
+    border-radius: 10px;
+
+}
+
+.dis .title2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #EEEEEE;
+    display: flex;
+    justify-content: space-between;
+}
+
+.count {
+    background-color: #0046FF;
+    color: #fff;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 4px;
+}
+
+/* ///////////////////////////// */
+
+.empty {
+    color: #808087;
+    text-align: center;
+    margin: 30px;
+}
+
+.empty .box {
+    font-size: 220px;
+}
+
+/* ///////////////////////////////////////////// */
+/* قومي بحذف هذا الكود بالكامل */
+.card {
+    position: relative;
+}
+
+.ebtn {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: calc(50% - 15px);
+   font-size: 10px;
+   height: 30px;
+}
+
+.dbtn {
+    position: absolute;
+     height: 30px;
+    bottom: 5px;
+    right: -50px;
+    width: calc(50% - 15px);
+    font-size: 10px;
+}
+
+.search {
+    display: inline-block;
+  position: relative;
+  width: 40%;
+  margin: 15px;
+ 
+}
+
+.search input {
+  width: 100%;
+  padding-left: 35px;   
+  /* height: 40px; */
+ 
+}
+
+.search .glass {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%); 
+  color: #888;
+}
+
+.glass:hover{
+    cursor: pointer;
+}
+
+/* dark mode */
+
+body.dark {
+  background-color: #19183B;
+  color: #E7F2EF;
+}
+body.dark header{
+    background-color: #A1C2BD;
+    color: #E7F2EF;
+}
+
+body.dark .form{
+    background-color: #708993;
+    color: #19183B;
+}
+body.dark .title ,
+body.dark .title2{
+   background-color:#19183B ;
+   color:#E7F2EF ;
+}
+body.dark .counter{
+    background-color: #A1C2BD;
+    color: #19183B;
+}
+
+#mode {
+  cursor: pointer;
+  font-size: 24px;
+}
+body.dark  .count {
+  background-color: #708993;   
+  color: #19183B;               
+  padding: 5px 10px;          
+  border-radius: 8px;         
+  font-weight: bold;          
+}
+
+
+@media (max-width: 768px) {
+  .form-container, 
+  .dis, 
+  .w-75 {
+    width: 95% !important;
+    padding: 15px;
+    margin: 10px auto;
+  }
+
+  .products {
+    grid-template-columns: 1fr 1fr; 
+    gap: 15px;
+  }
+
+  .product-card {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .search {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .count {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .products {
+    grid-template-columns: 1fr; 
+  }
+
+  .title2 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}

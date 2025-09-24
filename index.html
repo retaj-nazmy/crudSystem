@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="CSS/bootstrap.css">
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <title>Document</title>
+
+</head>
+
+<body class="light">
+
+    <main>
+        <header class="head">
+            <h4><i class="fa-solid fa-database fs-5"></i>smart inventory</h4>
+
+            <div class="icons">
+                <div class="import"><i class="fa-solid fa-upload"></i>import</div>
+                <div id="mode"><i class="fa-solid fa-moon"></i></div>
+            </div>
+
+        </header>
+
+        <div class="container d-flex justify-content-between">
+
+            <div class="cart form  w-25 bg-light border border-0  p-5 my-5 ">
+                <div class="title">
+                    <h5><i class="fa-solid fa-circle-plus"></i> add new product</h5>
+                </div>
+                <label for="productName"><i class="fa-solid fa-tag"></i>product</label>
+                <input type="text" id="productName" class="form-control my-2">
+
+                <label for="productPrice"> <i class="fa-regular fa-dollar-sign"></i> price</label>
+                <input type="number" id="productPrice" class="form-control my-2">
+
+                <label for="category"><i class="fa-solid fa-list"></i>category</label>
+                <br>
+                <select name="" id="category" aria-placeholder="select category" class="w-100">
+                    <option value="" disabled="disabled" selected>all categories</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Clothing">Clothing</option>
+                    <option value="Books">Books</option>
+                    <option value="Home&garden">Home & garden</option>
+                    <option value="Sports">Sports</option>
+                    <option value="Food">Food</option>
+                    <option value="Health">Health & Beauty</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <br>
+                <label for="description"><i class="fa-solid fa-bars-staggered"></i>description</label>
+                <textarea name="description" id="description" class="form-control mb-3"></textarea>
+
+                <button onclick="addProduct()" id="addProduct" class="btn btn-primary m-auto    "><i
+                        class="fa-solid fa-plus"></i>Add product</button>
+            </div>
+
+            <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+            <div class="w-75 m-auto bg-light border border-3 p-5 my-5  dis">
+                <div class="title2 d-inline-flex">
+                    <h3>products</h3>
+                    <div class="count">
+                        <span id="counter">0</span>products
+                    </div>
+                </div>
+
+                <div class="search">
+                    <div class="icon "><i class="glass fa-solid fa-magnifying-glass"></i></div>
+                    <input type="search" id="searchInput" placeholder="search products ..."
+                        onkeyup="searchProduct(this.value)">
+
+                </div>
+
+                <select name="" id="select" class="w-50" onchange="filterByCategory(this.value)">
+                    <option value="" disabled="disabled" selected>all categories</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Clothing">Clothing</option>
+                    <option value="Books">Books</option>
+                    <option value="Home&garden">Home & garden</option>
+                    <option value="Sports">Sports</option>
+                    <option value="Food">Food</option>
+                    <option value="Health">Health & Beauty</option>
+                    <option value="Other">Other</option>
+                </select>
+                <div class="empty">
+                    <i class="fa-brands fa-dropbox box"></i>
+                    <h4>No Products Found</h4>
+                    <p>Add your First Product using the form on left!</p>
+                </div>
+                <div id="productsList" class="row gap-3"></div>
+
+            </div>
+
+        </div>
+    </main>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
